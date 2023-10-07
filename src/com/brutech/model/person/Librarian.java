@@ -6,7 +6,7 @@ public class Librarian extends Person {
 
     public Librarian(String name, String password) {
         super(name);
-        this.password =password;
+        this.password = password;
     }
 
     @Override
