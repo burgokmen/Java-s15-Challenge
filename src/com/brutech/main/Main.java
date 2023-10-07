@@ -8,3 +8,4 @@ public class Main {
 
 // TODO ideas here
 // enum Course has a setter . Librarian could use that setter to add new course types
+
