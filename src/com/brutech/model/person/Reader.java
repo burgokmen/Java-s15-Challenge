@@ -6,11 +6,12 @@ public class Reader extends Person {
     private String name;
     private Set<String> books;
 
-    public Reader(String name) {
+
+    public Reader(String name, String name1, Set<String> books) {
         super(name);
+        this.name = name1;
+        this.books = books;
     }
-
-
 
     @Override
     public String whoYouAre() {
