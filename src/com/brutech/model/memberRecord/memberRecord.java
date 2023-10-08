@@ -12,6 +12,17 @@ public abstract class memberRecord {
     private String address;
     private long cellular;
 
+    public int getMemberId() {
+        return memberId;
+    }
+
+    public String getDateOfMembership() {
+        return dateOfMembership;
+    }
+
+    public int getNumberOfBooksBorrowed() {
+        return numberOfBooksBorrowed;
+    }
 
 
 }
