@@ -1,6 +1,12 @@
 package com.brutech.model.enums;
 
 public enum MemberType {
-    STUDENT,
-    FACULTY,
+    STUDENT("stu"),
+    FACULTY("fac");
+
+    private final String type;
+
+    MemberType(String type) {
+        this.type = type;
+    }
 }
