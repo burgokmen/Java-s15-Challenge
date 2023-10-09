@@ -2,7 +2,7 @@ package com.brutech.model.books;
 
 import java.util.Objects;
 
-public abstract class Book {
+public abstract class Book implements Borrowable {
     private int BookId;
     private String author;
     private String title;
@@ -53,13 +53,10 @@ public abstract class Book {
 
     };
 
-    public void updateStatus (){
-        this.status = !status;
+    @Override
+    public void updateBorrowStatus() {
+        this.status =  !status;
     }
-
-
-
-
 
     @Override
     public boolean equals(Object o) {
