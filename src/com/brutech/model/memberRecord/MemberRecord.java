@@ -2,19 +2,20 @@ package com.brutech.model.memberRecord;
 
 import com.brutech.model.enums.MemberType;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public abstract class MemberRecord {
     private int memberId;
     private MemberType type;
-    private String dateOfMembership;
+    private LocalDate dateOfMembership;
     private int numberOfBooksBorrowed = 0;
     private final int maxNumBooksBorrowed = 5;
     private String name;
     private String address;
     private long cellular;
 
-    public MemberRecord(int memberId, MemberType type, String dateOfMembership, String name, String address, long cellular) {
+    public MemberRecord(int memberId, MemberType type, LocalDate dateOfMembership, String name, String address, long cellular) {
         this.memberId = memberId;
         this.type = type;
         this.dateOfMembership = dateOfMembership;
@@ -27,7 +28,7 @@ public abstract class MemberRecord {
         return memberId;
     }
 
-    public String getDateOfMembership() {
+    public LocalDate getDateOfMembership() {
         return dateOfMembership;
     }
 
