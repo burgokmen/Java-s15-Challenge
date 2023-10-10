@@ -7,4 +7,5 @@ public class Journals extends Book {
         super(bookId, author, title, price, status, edition, dateOfPurchase);
     }
 
+
 }

@@ -71,6 +71,7 @@ public abstract class Book implements Borrowable {
         return Objects.hash(BookId);
     }
 
+
     @Override
     public String toString() {
         return "Book{" +
