@@ -23,10 +23,6 @@ public class Author extends Person{
         books.add(newBook);
     }
 
-
-
-
-
     @Override
     public String whoYouAre() {
         String bk = books.size() > 1 ? "books" : "book";
