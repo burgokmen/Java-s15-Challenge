@@ -3,7 +3,6 @@ package com.brutech.model.person;
 import java.util.Set;
 
 public class Author extends Person{
-    private String name;
     private Set<String> books;
 
     public Author(Set<String> books, String name) {
@@ -26,7 +25,7 @@ public class Author extends Person{
     @Override
     public String whoYouAre() {
         String bk = books.size() > 1 ? "books" : "book";
-        return name + "the Author of"+ " "  + books.size() + " " + bk;
+        return getName() + "the Author of"+ " "  + books.size() + " " + bk;
     }
 
     @Override

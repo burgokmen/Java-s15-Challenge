@@ -1,7 +1,7 @@
 package com.brutech.model.person;
 
 public class Librarian extends Person {
-    private String name;
+    private final int id = 1;
     private String password;
 
     public Librarian(String name, String password) {
@@ -13,4 +13,5 @@ public class Librarian extends Person {
     public String whoYouAre() {
         return null;
     }
+
 }
