@@ -1,5 +1,7 @@
 package com.brutech.model.person;
 
+import com.brutech.model.books.Book;
+
 public class Librarian extends Person {
     private final int id = 1;
     private String password;
@@ -12,6 +14,10 @@ public class Librarian extends Person {
     @Override
     public String whoYouAre() {
         return null;
+    }
+    @Override
+    public void removeBook(Book book){
+
     }
 
 }

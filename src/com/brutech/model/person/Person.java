@@ -1,5 +1,7 @@
 package com.brutech.model.person;
 
+import com.brutech.model.books.Book;
+
 public abstract class Person {
     private String name;
 
@@ -16,4 +18,20 @@ public abstract class Person {
     }
 
     public abstract String whoYouAre();
+
+    public Book borrowBook(Book book){
+        return book;
+    }
+
+  public void addBook(Book book){
+
+  }
+
+  public void returnBook(Book book){
+
+  }
+
+  public void removeBook(Book book){
+
+  }
 }

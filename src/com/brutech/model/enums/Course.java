@@ -30,6 +30,17 @@ public enum Course {
     public void setCourseCode(int courseCode) {
         this.courseCode = courseCode;
     }
+
+    // enum Course has a setter . Librarian could use that setter to add new course types
+
+    // TODO we may add extra limit if the membership date is more than 5 years or
+    // professor or a student wants to borrow extra book from their related areas.
+    // TODO show library method needs to review in Library class
+    // TODO LocalDate sinifini date tutmak icin kullan
+    // Recommendation System:
+    // Implement a recommendation engine that suggests books based on a user's reading history or interests.
+
+
 }
 
 

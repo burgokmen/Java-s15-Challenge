@@ -4,7 +4,7 @@ public enum JournalType {
     ACADEMIC,
     TRADE,
     POPULAR,
-    ;
+
 
 
 }

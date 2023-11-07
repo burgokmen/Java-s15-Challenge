@@ -3,7 +3,7 @@ package com.brutech.model.books;
 import java.util.Objects;
 
 public abstract class Book implements Borrowable {
-    private int BookId;
+    private long id;
     private String author;
     private String title;
     private double price;
@@ -11,8 +11,8 @@ public abstract class Book implements Borrowable {
     private String edition;
     private String dateOfPurchase;
 
-    public Book(int bookId, String author, String title, double price, boolean status, String edition, String dateOfPurchase) {
-        BookId = bookId;
+    public Book(long id, String author, String title, double price, boolean status, String edition, String dateOfPurchase) {
+        this.id = id;
         this.author = author;
         this.title = title;
         this.price = price;
@@ -21,8 +21,8 @@ public abstract class Book implements Borrowable {
         this.dateOfPurchase = dateOfPurchase;
     }
 
-    public int getBookId() {
-        return BookId;
+    public long getBookId() {
+        return id;
     }
 
     public String getAuthor() {
@@ -49,7 +49,7 @@ public abstract class Book implements Borrowable {
         return dateOfPurchase;
     }
 
-    public void changeOwner(int BookId){
+    public void changeOwner(long id){
 
     };
 
@@ -63,19 +63,19 @@ public abstract class Book implements Borrowable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return BookId == book.BookId;
+        return id == book.id;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(BookId);
+        return Objects.hash(getBookId());
     }
 
 
     @Override
     public String toString() {
         return "Book{" +
-                "BookId=" + BookId +
+                "BookId=" + id +
                 ", author='" + author + '\'' +
                 ", title='" + title + '\'' +
                 ", price=" + price +

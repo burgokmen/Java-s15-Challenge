@@ -1,15 +1,18 @@
 package com.brutech.model.person;
 
+import java.util.List;
 import java.util.Set;
 
 public class Member extends Person {
-    private Set<String> books;
+    private List<String> books;
 
 
-    public Member(String name, Set<String> books) {
+    public Member(String name, List<String> books) {
         super(name);
         this.books = books;
     }
+
+
 
     @Override
     public String whoYouAre() {
@@ -24,4 +27,7 @@ public class Member extends Person {
                 ", books=" + books +
                 '}';
     }
+
+
+
 }
