@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class FacultyRecord extends MemberRecord {
 
 
-    public FacultyRecord(int memberId, MemberType type, LocalDate dateOfMembership, String name, String address, long cellular) {
+    public FacultyRecord(int memberId, MemberType type, String dateOfMembership, String name, String address, long cellular) {
         super(memberId, type, dateOfMembership, name, address, cellular);
     }
 
