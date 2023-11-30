@@ -1,5 +1,9 @@
 package com.brutech.model.enums;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public enum Course {
     MATH( "Mathematics", 1),
     PSY("Psychology", 2),
@@ -14,6 +18,18 @@ public enum Course {
         this.courseName = courseName;
         this.courseCode = courseCode;
     }
+
+
+    private static Set<Course> courses = new HashSet<>(Arrays.asList(Course.values()));
+
+    public static void addCourse(String courseName) {
+        courses.add(Course.valueOf(courseName.toUpperCase()));
+    }
+
+    public static Set<Course> getCourses() {
+        return courses;
+    }
+
 
     public String getCourseName() {
         return courseName;
@@ -31,14 +47,7 @@ public enum Course {
         this.courseCode = courseCode;
     }
 
-    // enum Course has a setter . Librarian could use that setter to add new course types
 
-    // TODO we may add extra limit if the membership date is more than 5 years or
-    // professor or a student wants to borrow extra book from their related areas.
-    // TODO show library method needs to review in Library class
-    // TODO LocalDate sinifini date tutmak icin kullan
-    // Recommendation System:
-    // Implement a recommendation engine that suggests books based on a user's reading history or interests.
 
 
 }
