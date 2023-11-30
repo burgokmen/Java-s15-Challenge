@@ -1,9 +1,20 @@
 package com.brutech.main;
 
+import com.brutech.model.Library;
+import com.brutech.model.enums.MemberType;
+import com.brutech.model.memberRecord.FacultyRecord;
+import com.brutech.model.memberRecord.StudentRecord;
+
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+        Library brutech = new Library();
+        StudentRecord bru = new StudentRecord(1, MemberType.STUDENT, "2020-01-01", "Bru", "Brutech", 1234567890);
+        StudentRecord icardi = new StudentRecord(2, MemberType.STUDENT, "2022-02-05", "Icardi", "Inter", 1234567890);
+        FacultyRecord admin = new FacultyRecord(3, MemberType.FACULTY, "2003-02-05", "Admin", "Brutech", 1234567890);
+
         while (true) try {
             System.out.println("Welcome to Brutech Library");
             System.out.println("Please choose your role: ");
@@ -24,45 +35,28 @@ public class Main {
                     break;
                 default:
                     System.out.println("Please enter a valid role");
+
+
             }
+
+
+
+
+
+
+
         } catch (Exception e) {
             System.out.println("Please enter a valid role");
         }
 
 
+
+
+
+
     }
+    
 }
-
-// TODO ideas here
-// enum Course has a setter . Librarian could use that setter to add new course types
-
-
-// TODO we may add extra limit if the membership date is more than 5 years or
-// professor or a student wants to borrow extra book from their related areas.
-
-//TODO show library method needs to review in Library class
-
-//TODO LocalDate sinifini date tutmak icin kullan
-
-//Recommendation System:
-//Implement a recommendation engine that suggests books based on a user's reading history or interests.
-//Book Recommendations from Librarians:
-//Enable librarians to recommend books to users based on their preferences.
-
-
-
-//Book Availability Calendar:
-//Show the availability of each book on a calendar, indicating when a book is available for borrowing.
-
-//Book Status Updates:
-//Send notifications to users when a book they're interested in becomes available or when their borrowed books are due.
-
-
-//Gamification Elements:
-//Introduce gamification elements like badges, achievements, and reading challenges to encourage user engagement.
-//they may get a badge if they read 10 books in a month, or they may get a badge if they read 100 books in a year.
-//their max book limit may increase if they get a badge.
-
 
 
 
